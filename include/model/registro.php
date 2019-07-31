@@ -1,6 +1,6 @@
 <?php 
 
-$nombreUsuario = filter_var($_POST['usuario'], FILTER_SANITIZE_STRING);
+$nombreUsuario = filter_var($_POST['nombre'], FILTER_SANITIZE_STRING);
 $apellidoUsuario = filter_var($_POST['apellido'], FILTER_SANITIZE_STRING);
 $usuario = filter_var($_POST['usuario'], FILTER_SANITIZE_STRING);
 $passwordUsuario = filter_var($_POST['password'], FILTER_SANITIZE_STRING);

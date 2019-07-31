@@ -9,27 +9,16 @@
       
       <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Agregar
+          Acciones
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="usuario.php">Usuario</a>
-          <a class="dropdown-item" href="#">..</a>
+          <a class="dropdown-item" href="usuario.php">Agregar Usuario</a>
+          <a class="dropdown-item" href="lista-usuarios.php">Lista de Usuarios</a>
           <div class="dropdown-divider"></div>
-          <a class="dropdown-item" href="#">...</a>
+          <a class="dropdown-item" href="login">Ir a Inicio de Sesión</a>
         </div>
       </li> 
-
-      <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Lista
-        </a>
-        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="lista-usuarios.php">Lista de Usuarios</a>
-          <a class="dropdown-item" href="#">..</a>
-          <div class="dropdown-divider"></div>
-          <a class="dropdown-item" href="#">...</a>
-        </div>
-      </li>      
+    
     </ul>
   </div>
 </nav>

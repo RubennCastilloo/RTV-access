@@ -63,6 +63,7 @@
     </select>
 </div>
 </div>
+<input type="hidden" class="editar-empleado" id="id" value="<?php echo $usuario['id']; ?>">
 <button type="button" class="btn btn-info" id="editarUsuario">Editar Usuario</button>
 </form>
 </div>

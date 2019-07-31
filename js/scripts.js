@@ -1,5 +1,6 @@
 const registrar = document.querySelector('#registrarUsuario'),
-      listadoUsuario = document.querySelector('.listado-usuarios');
+      listadoUsuario = document.querySelector('.listado-usuarios'),
+      editUser = document.querySelector('#editarUsuario');
 
 eventListenner();
 
@@ -9,6 +10,9 @@ function eventListenner() {
     }
     if (listadoUsuario) {
         listadoUsuario.addEventListener('click', eliminarUsuario);
+    }
+    if (editUser) {
+      editUser.addEventListener('click', editarUsuario);
     }
 }
 
@@ -129,4 +133,47 @@ function eliminarUsuario(e) {
     }
 }
 
+function editarUsuario(e) {
+  e.preventDefault();
+
+  const nombre = document.querySelector('#nombre').value,
+        apellido = document.querySelector('#apellido').value,
+        usuario = document.querySelector('#usuario').value,
+        password = document.querySelector('#password').value,
+        tipo = document.querySelector('#usuarioTipo').value,
+        id = document.querySelector('#id').value;
+
+        if (nombre === '' || apellido === '' || usuario === '' || password === '' || tipo === '') {
+          notificacionFlotante('error', 'Todos los campos son obligatorios');
+        } else {
+          const datosUsuario = new FormData();
+          datosUsuario.append('nombre', nombre);
+          datosUsuario.append('apellido', apellido);
+          datosUsuario.append('usuario', usuario);
+          datosUsuario.append('password', password);
+          datosUsuario.append('tipo', tipo);
+          datosUsuario.append('id', id);
+
+          const xhr = new XMLHttpRequest();
+          xhr.open('POST', 'include/model/editar.php', true);
+          xhr.onload = function() {
+            if (this.status === 200) {
+              const respuesta = JSON.parse(xhr.responseText);
+
+              if (respuesta.respuesta === 'correcto') {
+                notificacionFlotante('success', 'Usuario editado correctamente');
+                setTimeout(() => {
+                    window.location.href = 'lista-usuarios.php';
+                }, 3000);
+              }
+              if (respuesta.respuesta === 'error') {
+                notificacionFlotante('error', 'Hubo un error al editar usuario');
+              }
+            }
+            
+          }
+          xhr.send(datosUsuario);
+        }
+  
+}
 
