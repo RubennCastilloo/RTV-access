@@ -109,12 +109,32 @@ function loginPage(e) {
     if (usuario === '' || password === '') {
         notificacionFlotante('error', 'Todos los campos son obligatorios');
     } else {
-        
+        const datosLogin = new FormData();
+        datosLogin.append('usuario', usuario);
+        datosLogin.append('password', password);
+
+        const xhr = new XMLHttpRequest();
+        xhr.open('POST', 'include/model/sesion.php', true);
+        xhr.onload = function() {
+            const respuesta = JSON.parse(xhr.responseText);
+            if (respuesta.respuesta === 'correcto') {
+                notificacionFlotante('success', 'Todo Correcto');
+                window.location.href = '/radio';
+            }
+            if (respuesta.respuesta === 'incorrecto') {
+                notificacionFlotante('error', 'Password Incorrecto');
+            }
+            if (respuesta.respuesta === 'noexiste') {
+                notificacionFlotante('error', 'Usuario no existe');
+            }
+
+            
+        }
+        xhr.send(datosLogin);
     }
-
-
-
 }
+
+
 
 function notificacionFlotante(tipo, texto) {
     const Toast = Swal.mixin({

@@ -48,7 +48,7 @@
 </div>
 <div class="col-md-4 mb-3">
   <label for="password">Password</label>
-  <input type="password" class="form-control ingresarApellido" id="password" placeholder="Password"  required value="<?php echo ($usuario['password']) ? $usuario['password'] : ''; ?>">
+  <input type="password" class="form-control ingresarApellido" id="password" placeholder="Password"  required value="">
   <div class="valid-feedback">
     Correcto!
   </div>

@@ -1,3 +1,10 @@
+<?php 
+    session_start();
+    if(isset($_GET['cerrar_sesion'])) {
+        //   echo "Si, presionaste en cerrar";
+        $_SESSION = array ();
+      }
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -28,6 +35,8 @@
 <!--===============================================================================================-->
 </head>
 <body>
+
+	
 	
 	<div class="limiter">
 		<div class="container-login100">
