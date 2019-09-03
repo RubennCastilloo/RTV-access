@@ -16,6 +16,7 @@ try {
         if (password_verify($password, $password_usr)) {
             session_start();
             $_SESSION['nombre'] = $usuario_usr;
+            $_SESSION['tipo'] = $tipo;
             $_SESSION['login'] = true;
 
             $respuesta = array(

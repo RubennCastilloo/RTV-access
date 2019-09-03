@@ -118,8 +118,14 @@ function loginPage(e) {
         xhr.onload = function() {
             const respuesta = JSON.parse(xhr.responseText);
             if (respuesta.respuesta === 'correcto') {
-                notificacionFlotante('success', 'Todo Correcto');
-                window.location.href = '/radio';
+                if (respuesta.tipo === 'gen') {
+                    notificacionFlotante('success', 'Todo Correcto');
+                    window.location.href = '../access.php';
+                }
+                if (respuesta.tipo === 'admin') {
+                    notificacionFlotante('success', 'Todo Correcto');
+                    window.location.href = '../index.php';
+                }
             }
             if (respuesta.respuesta === 'incorrecto') {
                 notificacionFlotante('error', 'Password Incorrecto');
