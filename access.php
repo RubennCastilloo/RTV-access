@@ -4,7 +4,7 @@
 ?>
 
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-  <a class="navbar-brand" href="#"><i class="fas fa-tv"></i> <i class="fas fa-grip-lines-vertical"></i> <i class="fas fa-broadcast-tower"></i></a>
+  <a class="navbar-brand" href="access.php"><i class="fas fa-tv"></i> <i class="fas fa-grip-lines-vertical"></i> <i class="fas fa-broadcast-tower"></i></a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -39,12 +39,12 @@
   </thead>
   <tbody>
     <tr>
-      <td><a class="text-info" href="http://tvchihuahua.duckdns.org:10083/television/" target="_blank">TV Chihuahua</a></td>  
-      <td><a class="text-info" href="http://streamingradio.duckdns.org:10082/radio/" target="_blank">Radio Streaming</a></td>
+      <td><a class="text-info" href="tvchih.php" target="_blank">TV Chihuahua</a></td>  
+      <td><a class="text-info" href="radiostream.php" target="_blank">Radio Streaming</a></td>
     </tr>
     <tr>
-      <td><a class="text-info" href="http://tvjuarez.duckdns.org:8080/television/" target="_blank">TV Juárez</a></td>
-      <td><a class="text-info" href="http://radiochihuahua.duckdns.org:10080/radio/" target="_blank">Radio Chihuahua</a></td>
+      <td><a class="text-info" href="tvjuarez.php" target="_blank">TV Juárez</a></td>
+      <td><a class="text-info" href="radiochih.php" target="_blank">Radio Chihuahua</a></td>
     </tr>
   </tbody>
 </table>
