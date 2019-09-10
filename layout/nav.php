@@ -16,7 +16,6 @@
           <a class="dropdown-item" href="lista-usuarios.php">Lista de Usuarios</a>
           <div class="dropdown-divider"></div>
           <a class="dropdown-item" href="access.php">Links</a>
-          <a class="dropdown-item" href="login">Ir a Inicio de Sesión</a>
         </div>
       </li> 
     

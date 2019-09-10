@@ -1,5 +1,5 @@
 <?php
-$conn = new mysqli('localhost', 'root', 'root', 'monito');
+$conn = new mysqli('monitomx.duckdns.org:3306', 'root', 'rosetyler', 'monito');
 //comprobar conexion a la base de datos
 // echo "<pre>";
 //   var_dump($conn->ping());
